@@ -1,0 +1,14 @@
+client secrets get rotated
+spotify developers
+
+pip install spotipy pandas matplotlib mysql-connector-python
+
+https://open.spotify.com/track/4eQO9RHTjYT1O9DTuZLj9v WEEKND - BLINDING LIGHTS
+https://open.spotify.com/track/5d6Mjuu2uCGRPYpFjGpCX5?si=233a369d1fc84aa4 SUGAR
+https://open.spotify.com/track/4Ouhoi2lAhrLJKFzUqEzwl?si=a9c9a509c9cb4992 BORN TO DIE
+https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN?si=362a626b0ff8422e SIGN OF THE TIMES
+https://open.spotify.com/track/6uBhi9gBXWjanegOb2Phh0?si=c2ba84c993894755 STAY
+https://open.spotify.com/track/6DCZcSspjsKoFjzjrWoCdn?si=4b4edeecca52416f GOD'S PLAN
+https://open.spotify.com/track/0KKkJNfGyhkQ5aFogxQAPU?si=04cf53863a064ea7 THAT'S WHAT I LIKE
+https://open.spotify.com/track/7BKLCZ1jbUBVqRi2FVlTVw?si=63d420b9093c4445 CLOSER
+https://open.spotify.com/track/4iLqG9SeJSnt0cSPICSjxv?si=8433850c9aaf4919 ATTENTION
