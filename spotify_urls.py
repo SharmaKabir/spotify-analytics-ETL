@@ -46,7 +46,7 @@ for track_url in track_urls:
 
         
         insert_query = """
-        INSERT INTO spotify_tracks (track_name, artist, album, popularity, duration_minutes)
+        INSERT  IGNORE INTO spotify_tracks (track_name, artist, album, popularity, duration_minutes)
         VALUES (%s, %s, %s, %s, %s)
         """
         cursor.execute(insert_query, (
