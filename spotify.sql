@@ -37,4 +37,4 @@ SELECT
 FROM spotify_tracks
 GROUP BY popularity_range;
 
--- DROP TABLE IF EXISTS spotify_tracks;
+ --DROP TABLE IF EXISTS spotify_tracks;
