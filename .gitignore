@@ -3,3 +3,6 @@
 .venv/
 venv/
 ENV/
+
+.cache
+.cache-*
