@@ -11,31 +11,31 @@ sp=spotipy.Spotify(auth_manager=SpotifyClientCredentials(
 ))
 
 db_config = {
-    'host': 'localhost',           # Change to your MySQL host
-    'user': 'root',       # Replace with your MySQL username
-    'password': 'root',   # Replace with your MySQL password
-    'database': 'spotify_db'       # Replace with your database name
+    'host': 'localhost',          
+    'user': 'root',       
+    'password': '12345678',  
+    'database': 'spotify_db'       
 }
-# Connect to the database
+
 connection = mysql.connector.connect(**db_config)
 cursor = connection.cursor()
 
-# Read track URLs from file
+
 file_path = "track_urls.txt"
 with open(file_path, 'r') as file:
     track_urls = file.readlines()
 
-# Process each URL
+
 for track_url in track_urls:
-    track_url = track_url.strip()  # Remove any leading/trailing whitespace
+    track_url = track_url.strip()  
     try:
-        # Extract track ID from URL
+        #get track_id from url
         track_id = re.search(r'track/([a-zA-Z0-9]+)', track_url).group(1)
 
-        # Fetch track details from Spotify API
+        #fetch details from spotify api
         track = sp.track(track_id)
 
-        # Extract metadata
+        
         track_data = {
             'Track Name': track['name'],
             'Artist': track['artists'][0]['name'],
@@ -44,7 +44,7 @@ for track_url in track_urls:
             'Duration (minutes)': track['duration_ms'] / 60000
         }
 
-        # Insert data into MySQL
+        
         insert_query = """
         INSERT INTO spotify_tracks (track_name, artist, album, popularity, duration_minutes)
         VALUES (%s, %s, %s, %s, %s)
@@ -63,7 +63,7 @@ for track_url in track_urls:
     except Exception as e:
         print(f"Error processing URL: {track_url}, Error: {e}")
 
-# Close the connection
+
 cursor.close()
 connection.close()
 
