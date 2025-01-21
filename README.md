@@ -45,13 +45,13 @@ SPOTIFY_CLIENT_SECRET=your_client_secret
 
 5. Create MySQL DB (Use this command / run commands one-by-one in the .sql file):
 ```bash
-source spotify.sqk
+source spotify.sql
 ```
 
 ### Run the project
 1. Run:
 ```bash
-python3 spotify_urls.y
+python3 spotify_urls.py
 ```
 
 
