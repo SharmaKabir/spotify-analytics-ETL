@@ -38,12 +38,20 @@ pip install -r requirements.txt
 ```
 
 4. Set up .ENV file:
+```bash
 SPOTIFY_CLIENT_ID=your_client_id
 SPOTIFY_CLIENT_SECRET=your_client_secret
+```
 
 5. Create MySQL DB (Use this command / run commands one-by-one in the .sql file):
 ```bash
 source spotify.sqk
+```
+
+### Run the project
+1. Run:
+```bash
+python3 spotify_urls.y
 ```
 
 
