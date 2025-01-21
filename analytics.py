@@ -13,7 +13,7 @@ def analyze_spotify_data():
         password="12345678"
     )
     
-    os.makedirs('visualizations', exist_ok=True)
+    os.makedirs('visualisations', exist_ok=True)
     
     
     df = pd.read_sql("SELECT * FROM spotify_tracks", connection)
@@ -22,7 +22,7 @@ def analyze_spotify_data():
     plt.figure(figsize=(12, 6))
     sns.histplot(data=df, x='popularity', bins=20)
     plt.title('Track Popularity Distribution')
-    plt.savefig('visualizations/popularity_dist.png')
+    plt.savefig('visualisations/popularity_dist.png')
     plt.close()
     
     #top artists
@@ -31,14 +31,14 @@ def analyze_spotify_data():
     plt.title('Top 10 Artists by Number of Tracks')
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('visualizations/top_artists.png')
+    plt.savefig('visualisations/top_artists.png')
     plt.close()
     
     #duation-popularity
     plt.figure(figsize=(10, 6))
     sns.scatterplot(data=df, x='duration_minutes', y='popularity')
     plt.title('Track Duration vs Popularity')
-    plt.savefig('visualizations/duration_vs_popularity.png')
+    plt.savefig('visualisations/duration_vs_popularity.png')
     plt.close()
     
     #stats
@@ -51,7 +51,7 @@ def analyze_spotify_data():
     }
     
     #add to folder file
-    with open('visualizations/stats_summary.txt', 'w') as f:
+    with open('visualisations/stats_summary.txt', 'w') as f:
         for key, value in stats.items():
             f.write(f"{key}: {value}\n")
     
@@ -59,4 +59,4 @@ def analyze_spotify_data():
 
 if __name__ == "__main__":
     stats = analyze_spotify_data()
-    print("Analysis complete! Check visualizations folder.")
+    print("Analysis complete! Check visualisations folder.")
