@@ -38,3 +38,12 @@ FROM spotify_tracks
 GROUP BY popularity_range;
 
  --DROP TABLE IF EXISTS spotify_tracks;
+
+ SELECT * FROM spotify_tracks
+ WHERE track_name LIKE '%love%'
+
+ -- Check for exact duplicate track_name/artist combinations
+SELECT track_name, artist, COUNT(*) as count
+FROM spotify_tracks
+GROUP BY track_name, artist
+HAVING COUNT(*) > 1;
